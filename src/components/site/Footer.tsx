@@ -16,7 +16,7 @@ const industryLinks = [
   { label: "Pharmaceutical", to: "/industries" },
   { label: "Food Industry", to: "/industries" },
   { label: "Process Industry", to: "/industries" },
-];
+] as const;
 
 export function Footer() {
   const { company } = useSite();
