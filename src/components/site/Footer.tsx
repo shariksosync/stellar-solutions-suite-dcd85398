@@ -8,7 +8,7 @@ const serviceLinks = [
   { label: "Product Management", to: "/services" },
   { label: "New Product Introduction", to: "/services" },
   { label: "Procurement Support", to: "/services" },
-];
+] as const;
 
 const industryLinks = [
   { label: "Material Handling", to: "/industries" },

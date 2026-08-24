@@ -88,10 +88,16 @@ export function Btn({
     </>
   );
   if (to) {
+    const LinkAny = Link as unknown as (p: {
+      to: string;
+      params?: Record<string, string>;
+      className?: string;
+      children?: ReactNode;
+    }) => ReactNode;
     return (
-      <Link to={to} params={params} className={cls}>
+      <LinkAny to={to} {...(params ? { params } : {})} className={cls}>
         {inner}
-      </Link>
+      </LinkAny>
     );
   }
   if (href) {
