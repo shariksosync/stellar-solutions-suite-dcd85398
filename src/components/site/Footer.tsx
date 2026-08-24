@@ -57,14 +57,14 @@ export function Footer() {
           <nav className="lg:col-span-2">
             <TechLabel tone="light">Company</TechLabel>
             <ul className="mt-5 space-y-3 text-sm text-onnavy-muted">
-              {[
+              {([
                 { label: "About", to: "/about" },
                 { label: "Services", to: "/services" },
                 { label: "Capabilities", to: "/capabilities" },
                 { label: "Projects", to: "/projects" },
                 { label: "Gallery", to: "/gallery" },
                 { label: "Contact", to: "/contact" },
-              ].map((l) => (
+              ] as const).map((l) => (
                 <li key={l.label}>
                   <Link to={l.to} className="transition-colors duration-300 hover:text-accent">
                     {l.label}
